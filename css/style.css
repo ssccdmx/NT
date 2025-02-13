@@ -1,0 +1,251 @@
+:root {
+	--primario: #013E6A;
+    --secundario: #1d6389;
+    --terciario: #082C5D;
+    --button:#2196F3;
+    --text: #313436;
+    --white:#FFF;
+    --black:#000;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  color: var(--text);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select:none;
+  user-select:none;
+  
+  }
+
+
+
+/* Estilo global para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Encabezado */
+h2 {
+    color: var(--primario);
+    margin-bottom: 24px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+/* Sección para ingresar el alias */
+#alias-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+#alias-input {
+    padding: 10px;
+    width: 200px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+#alias-input:focus {
+    border-color: var(--secundario);
+}
+
+#set-alias-btn {
+    padding: 10px 20px;
+    background-color: var(--button);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#set-alias-btn:hover {
+    background-color: var(--secundario);
+}
+
+/* Estilo para el chat */
+#chat-box {
+    width: 70%;
+    max-width: 70%;
+    height: 60%;
+    border: 1px solid #ddd;
+    overflow-y: auto;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-user-select: auto;
+    -moz-user-select: none;
+    -ms-user-select:none;
+    user-select: all;
+}
+
+#chat-box div {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #ecf0f1;
+}
+
+#chat-box div strong {
+    color: var(--button);
+}
+
+/* Estilo para el campo de entrada de mensajes */
+#message-input {
+    width: 70%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    margin-top: 10px;
+    
+}
+
+#message-input:focus {
+    border-color: var(--button);
+}
+
+/* Estilo para el botón de enviar */
+#send-btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: var(--button);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+#send-btn:hover {
+    background-color: var(--secundario);
+}
+
+/* Estilo para el indicador de escritura */
+#typing-indicator {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 10px;
+}
+
+/* Estilo para el área de entrada */
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+/* Diseño general de la página */
+input[type="text"]:focus {
+    border-color: var(--button);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+
+
+#announcement-bar {
+    background-color: var(--primario); /* Color de fondo */
+    color: var(--white); /* Color del texto */
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    position: fixed; /* Fija la cinta en la parte superior */
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+/* Ajustar el contenido principal para que no se solape con la cinta */
+body {
+    padding-top: 35px; /* Espacio para la cinta de anuncios */
+}
+
+@keyframes scrollText {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+.marquee {
+    display: inline-block;
+    animation: scrollText 22s linear infinite;
+}
+
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 71%;
+    margin-top: 5px;
+}
+#message-input {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+
+.date-separator {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: var(--button);
+    font-weight: bold;
+    background-color: var(--primario);
+    border-bottom: 2px solid #ddd;
+}

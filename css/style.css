@@ -1,10 +1,10 @@
 :root {
-	--primario: #CAD9FB;
-    --secundario: #6BD3E7;
+	--primario: #6BD3E7;
+    --secundario: #CAD9FB;
     --terciario: #082C5D;
     --button:#222;
     --text: #313436;
-    --white:#FFF;
+    --white:#CAD9FB;
     --black:#000;
 }
 
